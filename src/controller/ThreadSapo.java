@@ -3,10 +3,11 @@ package controller;
 public class ThreadSapo extends Thread{
 	
 	private int i;
+	private static int colocacao;
 
-	public ThreadSapo(int i/*, int colocacao*/) {
+	public ThreadSapo(int i, int colocacao) {
 		this.i = i;
-//		this.colocacao = colocacao;
+		this.colocacao = colocacao;
 	}
 	
 	@Override
@@ -27,7 +28,6 @@ public class ThreadSapo extends Thread{
 	}
 
 	private void Podio(int i, int percorrido) {
-		int colocacao = 1;
 		
 		if(percorrido >= 30) { 
 			System.out.println("O Sapo " + (i + 1) + " ficou em " + colocacao + "° lugar");
